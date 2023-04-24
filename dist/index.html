@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
    <script src="main.js" defer></script>
+   <link rel="stylesheet" href="../src/style.css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1>Weather App</h1>
     </header>
     
-    <main>
-        <input type="search" name="search" id="search">
-        <input type="submit" id="submit">
-        <div class="content" id="content"></div>
-
+    <main class="main">
+        <div class="weather">
+            <input type="search" name="search" id="search" placeholder="Your city here...">
+            <input type="submit" id="submit">
+            <div class="content" id="content"></div>
+        </div>
     </main>
 </body>
 </html>

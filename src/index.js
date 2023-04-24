@@ -1,3 +1,8 @@
+const submit = document.getElementById("submit");
+submit.addEventListener("click", getCurrentData);
+
+window.addEventListener("DOMContentLoaded", initalLoad());
+
 async function getCurrentData(location) {
     try {
         location = getLocation();
@@ -29,12 +34,6 @@ function getLocation() {
     search.value = "";
 
 }
-
-
-const submit = document.getElementById("submit");
-submit.addEventListener("click", getCurrentData);
-
-window.addEventListener("DOMContentLoaded", initalLoad());
 
 async function initalLoad() {
     const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=b17e082a2d9f4fffad193156232104&q=berlin`, {mode: "cors"});
